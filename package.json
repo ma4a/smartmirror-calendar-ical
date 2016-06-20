@@ -1,0 +1,40 @@
+{
+  "name": "smartmirror-calendar-ical",
+  "version": "1.0.0",
+  "description": "SmartMirror iCal calendar module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smartmirror",
+    "module",
+    "ics",
+    "calendar",
+    "ical"
+  ],
+  "author": "Matthias Schmidt",
+  "license": "",
+  "dependencies": {
+    "ical": "^0.5.0"
+  },
+  "devDependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  },
+  "smartmirror": {
+    "settings": {
+      "url": {
+        "type": "string",
+        "desc": "URL ot ics file, e.g. private google calandar address"
+      },
+      "limit": {
+        "type": "number",
+        "desc": "limit number of shown entries"
+      }
+    },
+    "size": [
+      "4x4"
+    ]
+  }
+}
