@@ -1,0 +1,16 @@
+style(type='text/css').
+  #calendar li { font-size:1.1em; font-weight:bold; padding:6px; border:none; list-style:none; width:480px; }
+  li.header { font-weight: bold; font-size:1.4em; list-style:none; }
+  i { display: block; }
+  i.right { text-align: right; }
+body
+  - months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+  li.header Kalender:
+  #calendar
+    each ev in events
+      li=ev.summary
+        i=ev.location
+        if ev.start.getHours() == ev.end.getHours()
+          i.right=ev.start.getDate() + '. ' + months[ev.start.getMonth()]
+        else if ev.start.getHours() > 0
+          i.right=ev.start.getDate() + '. ' + months[ev.start.getMonth()] + ' um ' + ('0'+ev.start.getHours()).slice(-2) + ':' + ('0'+ev.start.getMinutes()).slice(-2)
