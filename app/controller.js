@@ -40,7 +40,6 @@ exports.get = (params) => {
             ev.summary = limitString(ev.summary, 50);
             ev.location = limitString(ev.location, 55);
             events.push(ev);
-            console.log(ev);
           }
         }
       }
