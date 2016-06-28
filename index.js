@@ -20,13 +20,13 @@ app.get('/', function (req, res) {
   widget._id = '1234567890';
   widget.size = pckg.smartmirror.size[0];
 
-  params.url = 'https://calendar.google.com/calendar/ical/your-username%40gmail.com/private-abc123/basic.ics' //override for test purpose
+  params.url = "https://calendar.google.com/calendar/ical/your-username%40gmail.com/private-abc123/basic.ics" //override for test purpose
   params.limit = 4;
 
   controller.get(params)
-    .then((events) => {
+    .then((data) => {
       res.render('./index.jade', {
-        events: events,
+        data: data,
         widget: widget,
       });
     })

@@ -7,7 +7,7 @@ body
   - months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
   li.header Kalender:
   #calendar
-    each ev in events
+    each ev in data
       li=ev.summary
         i=ev.location
         if ev.start.getHours() == ev.end.getHours()
