@@ -35,7 +35,7 @@ svg(xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 50 50" height="5
 
 ul.list-unstyled
 
-  each ev in events
+  each ev in data
     li
       h3=ev.summary
       if ev.start.getHours() == ev.end.getHours()
